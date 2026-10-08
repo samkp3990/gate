@@ -35,6 +35,8 @@ jobs:
           CHECK_WORKER: ${{ secrets.DOMAIN }}
           CHECK_CONCURRENCY: "32"
           CHECK_TIMEOUT: "90"
+          # 入口地址直连 worker 本域名（优选域名池在部分地区解析异常时会导致全部超时）
+          HOSTS_ENTRY: "edgetunnel.booktree1099.workers.dev:443"
 
       - name: Ensure GitHub Pages is enabled (one-time auto setup)
         run: |
