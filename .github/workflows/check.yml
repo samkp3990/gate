@@ -36,7 +36,7 @@ jobs:
           CHECK_CONCURRENCY: "32"
           CHECK_TIMEOUT: "90"
           # 入口地址直连 worker 本域名（优选域名池在部分地区解析异常时会导致全部超时）
-          HOSTS_ENTRY: "edgetunnel.booktree1099.workers.dev:443"
+          HOSTS_ENTRY: "172.64.229.86:443,172.64.152.166:443,172.64.151.134:443,172.64.157.153:443,172.64.147.109:443,172.64.145.77:443,172.64.150.135:443,172.64.155.151:443"
 
       - name: Ensure GitHub Pages is enabled (one-time auto setup)
         run: |
